@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detail | Invoice Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+  <!-- Loader -->
+<div id="loader">
+  <span id="typing-text"></span>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar" id="main-navbar">
+  <div class="navbar-left">
+    <button class="brand" onclick="location.reload()">detail.</button>
+  </div>
+  <div class="navbar-right">
+    <a href="https://github.com/beefile">ABOUT</a>
+    <a href="https://forms.gle/qydPTTMpcmhEE8dUA">SEND FEEDBACKS</a>
+  </div>
+</nav>
+
+
+  <!-- Invoice Container -->
+  <div class="invoice-box">
+
+    <!-- Business Details -->
+    <section class="section">
+      <h1 class="title">Order Confirmation</h1>
+      <hr />
+      <div class="row">
+        <div class="col">
+          <label>Shop Name</label>
+          <input type="text" placeholder="e.g. Beethreads" />
+        </div>
+        <div class="col">
+          <label>Shop Address</label>
+          <input type="text" placeholder="City, Province" />
+        </div>
+      </div>
+            
+      <h2>Customer Information</h2>
+      <div class="row">
+        <div class="col">
+          <label>Customer Name</label>
+          <input type="text" placeholder="e.g. Maria Clara" />
+        </div>
+        <div class="col">
+          <label>Shipping Address</label>
+          <input type="text" placeholder="Complete Address" />
+        </div>
+        <div class="col">
+          <label>Contact Number</label>
+          <input type="text" id="contact-number" placeholder="e.g. 09123456789" />
+        </div>
+        <div class="col">
+          <label>Invoice / Order Number</label>
+          <input type="text" id="order-number" placeholder="e.g. 0001" />
+        </div>
+        <div class="col">
+  <label>Date of Order</label>
+  <input type="date" id="order-date" />
+</div>
+      </div>
+    </section>
+<!-- Order Items -->
+<section class="section">
+  <h2>Order Items</h2>
+  <div class="table-responsive">
+    <table id="item-list">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Total</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="text" placeholder="e.g. Crochet Bouquet" /></td>
+          <td><input type="number" value="1" oninput="calculateTotals()" /></td>
+          <td><input type="number" value="0" oninput="calculateTotals()" /></td>
+          <td>₱0</td>
+          <td><button class="delete-btn" onclick="removeItem(this)">✕</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <button onclick="addItem()">+ Add Item</button>
+</section>
+
+<!-- Payment -->
+<section class="section">
+  <h2>Payment & Summary</h2>
+  <div class="row">
+    <div class="col">
+      <label>Payment Method</label>
+      <select>
+        <option disabled selected>Select method</option>
+        <option>GCash</option>
+        <option>Cash</option>
+        <option>Credit Card</option>
+      </select>
+    </div>
+    <div class="col">
+      <label>Shipping Fee</label>
+      <input type="number" value="0" oninput="calculateTotals()" />
+    </div>
+  </div>
+
+  <div class="row">
+  <div class="col notes-box">
+    <label>Notes / Message</label>
+    <textarea rows="6" placeholder="e.g. Thank you for supporting my small business!"></textarea>
+  </div>
+
+  <div class="col summary-box">
+    <div class="summary">
+      <p>Subtotal: <span>₱0</span></p>
+      <p>Shipping: <span>₱0</span></p>
+      <p>Total: <span>₱0</span></p>
+      <p><strong>Overall Total: <span>₱0</span></strong></p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Download -->
+<div class="center">
+  <button class="action-button" onclick="window.print()">Print</button>
+  <button class="action-button no-image" onclick="downloadAsImage()">Save as Image</button>
+</div>
+
+
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    © 2025 • designed & built by vhina
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-image: linear-gradient(to bottom, #e8b4b8, #eabbbc, #ebc1c1, #ecc8c6, #edcecb, #eed1ce, #efd4d1, #f0d7d4, #f1d8d5, #f3d9d5, #f4dbd6, #f5dcd7);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+.invoice-box {
+  max-width: 900px;
+  margin: 10px auto 10px auto; /* ADD MORE top margin */
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #e8b4b8;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.05);
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #67595E;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 0.9em;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.col {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+input, select, textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  line-height: 1.4;
+}
+textarea {
+  width: 100%;
+  max-width: 700px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #fde2e4;
+}
+
+button {
+  background: none;
+  border: none;
+  color: #e63946;
+  cursor: pointer;
+  font-size: 1em;
+  padding-top: 15px;
+  text-decoration: none; /* ← this removes underline */
+}
+
+button:hover {
+  text-decoration: none; /* ← make sure hover also has no underline */
+}
+
+
+.summary {
+  text-align: right;
+  margin-top: 20px;
+}
+.summary p {
+  margin: 0.3rem 0;
+  font-size: 1.1rem; /* Make each line slightly bigger */
+}
+
+.summary strong {
+  font-size: 1.3rem; /* Make the "Overall Total" bold and larger */
+  font-weight: 700;
+}
+
+.center {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.center button {
+  background-color: #e63946;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1em;
+}
+
+.center button:hover {
+  background-color: #d62828;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.85em;
+  color: #777;
+  padding: 10px 0 20px;
+}
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+.summary-box {
+  flex: 1 1 40%;
+}
+
+.notes-box {
+  flex: 1 1 55%;
+}
+
+.notes-box textarea {
+  width: 100%;
+  height: 100%;
+  resize: vertical;
+}
+.section-row {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap; /* for responsiveness */
+}
+
+.section {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.half {
+  flex: 1;
+  min-width: 300px;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.col {
+  flex: 1;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+.summary p {
+  margin: 0.3rem 0;
+}
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table-responsive table {
+  min-width: 600px;
+}
+#loader {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: #67595E;
+  transition: opacity 0.6s ease;
+  font-size: 3.5rem;
+  color: #EED6D3;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#typing-text {
+  font-size: 3rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #EED6D3;
+  text-align: center;
+}
+
+.brand-name {
+  color: #E8B4B8;
+  font-weight: bold;
+}
+.brand {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #67595E;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  white-space: nowrap;
+}
+.brand:hover {
+  color: #a49393;
+}
+
+.delete-btn {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #e63946;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.delete-btn:hover {
+  color: #d62828;
+  transform: scale(1.1);
+}
+.action-button {
+  background-color: #67595E;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 5px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.action-button:hover {
+  background-color: #574d4a; /* slightly darker on hover */
+}
+.navbar {
+  display: flex;
+  flex-wrap: wrap; /* Makes it responsive on smaller screens */
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px; /* Increased size for larger navbar */
+  background: transparent;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+.navbar-left .brand {
+  font-size: 2rem; /* Bigger brand */
+  font-weight: 900;
+  color: #67595E;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.navbar-right {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 25px; /* Better spacing for responsiveness */
+  margin-top: 10px;
+}
+
+.navbar-right a {
+  color: #67595E;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase; /* Makes text uppercase */
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.navbar-right a:hover {
+  color: #a49393;
+}
+
+#main-navbar {
+  display: none;
+}
+@media (max-width: 600px) {
+  .navbar {
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-right {
+    justify-content: flex-start;
+    width: 100%;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .navbar-left .brand {
+    font-size: 2rem;
+  }
+
+  .navbar-right a {
+    font-size: 1rem;
+  }
+}
